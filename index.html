@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kandhala Janardhan | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#070A12;
+  color:#e5e7eb;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND */
+.bg{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at top,#1d4ed8,transparent 60%),
+    radial-gradient(circle at bottom,#7c3aed,transparent 60%);
+  opacity:0.55;
+  z-index:-1;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:18px 50px;
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(14px);
+  background:rgba(10,10,20,0.6);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  min-height:90vh;
+  padding:40px;
+}
+
+/* PROFILE */
+.profile{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:64px;
+  font-weight:700;
+  color:white;
+  background:linear-gradient(135deg,#3b82f6,#a855f7);
+  border:3px solid rgba(255,255,255,0.2);
+  animation:float 4s ease-in-out infinite;
+}
+
+/* TEXT */
+h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,#60a5fa,#a78bfa);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.subtitle{
+  color:#94a3b8;
+  margin-top:10px;
+  max-width:520px;
+  line-height:1.6;
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  margin-right:10px;
+  padding:10px 16px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#3b82f6,#a855f7);
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(124,58,237,0.4);
+}
+
+/* SECTION */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+h2{
+  margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:14px;
+  margin-bottom:15px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s ease;
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:translateY(-6px) scale(1.01);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+/* PROJECT IMAGE */
+.project-img{
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+/* =========================
+   PREMIUM CURSOR SYSTEM
+========================= */
+
+.cursor-glow{
+  position:fixed;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  pointer-events:none;
+  background:radial-gradient(circle, rgba(167,139,250,0.9), transparent 70%);
+  transform:translate(-50%,-50%);
+  z-index:9999;
+}
+
+.cursor-ring{
+  position:fixed;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  pointer-events:none;
+  border:1px solid rgba(167,139,250,0.25);
+  transform:translate(-50%,-50%);
+  z-index:9998;
+  animation:pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse{
+  0%{transform:translate(-50%,-50%) scale(0.8); opacity:0.6;}
+  50%{transform:translate(-50%,-50%) scale(1.2); opacity:0.2;}
+  100%{transform:translate(-50%,-50%) scale(0.8); opacity:0.6;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<nav>
+  <b>Kandhala Janardhan</b>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#internship">Internship</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+  <div class="profile">KJ</div>
+
+  <div>
+    <h1>Kandhala Janardhan</h1>
+
+    <p class="subtitle">
+      Cyber Security student passionate about ethical hacking, penetration testing,
+      vulnerability analysis, and building secure systems.
+    </p>
+
+    <a class="btn" href="mailto:kandhalajanardhan@gmail.com">Email</a>
+    <a class="btn" href="https://github.com/kandhala-janardhan">GitHub</a>
+    <a class="btn" href="https://linkedin.com">LinkedIn</a>
+    <a class="btn" href="./resume.pdf" download>Download Resume</a>
+  </div>
+
+</div>
+
+<!-- PROJECTS (UNCHANGED CONTENT + IMAGES) -->
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Vulnerability Scanner</h3>
+<p>Python-based security tool designed to detect XSS, SQL Injection risks, and input validation issues.</p>
+<img class="project-img" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Password Checker</h3>
+<p>Evaluates password strength using entropy analysis and pattern detection.</p>
+<img class="project-img" src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87">
+</div>
+
+<div class="card">
+<h3>Packet Analyzer</h3>
+<p>Captures and analyzes network traffic to detect suspicious behavior.</p>
+<img class="project-img" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+</div>
+
+<div class="card">
+<h3>Expense Monitor</h3>
+<p>Tracks daily expenses and provides financial insights.</p>
+<img class="project-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
+</div>
+
+<div class="card">
+<h3>DVWA Lab</h3>
+<p>Practiced SQL Injection, XSS, authentication bypass in controlled environment.</p>
+<img class="project-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+</div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="card">
+Cyber Security • Wireshark • Linux • Python • Burp Suite
+</div>
+</section>
+
+<!-- INTERNSHIP -->
+<section id="internship">
+<h2>Internship</h2>
+
+<div class="card">
+<b>Cyber Security Intern - Cisco</b><br><br>
+Worked on:
+<ul>
+<li>Network traffic analysis</li>
+<li>Vulnerability assessment</li>
+<li>Web application security testing</li>
+<li>Password security analysis</li>
+<li>Security reporting</li>
+</ul>
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+<h2>Certifications</h2>
+<div class="card">NPTEL - Innovation & Entrepreneurship</div>
+<div class="card">NPTEL - Privacy & Security in Social Media</div>
+<div class="card">NPTEL - Economic Growth and Development</div>
+<div class="card">Quick Heal - Linux</div>
+<div class="card">Quick Heal - Network Security</div>
+<div class="card">Quick Heal - Info Security</div>
+<div class="card">Quick Heal - Digital Forensics</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+Email: kandhalajanardhan@gmail.com<br>
+Phone: +91 8885496472<br>
+Location: Faridabad, Haryana
+</div>
+</section>
+
+<script>
+
+/* SCROLL ANIMATION */
+const cards=document.querySelectorAll('.card');
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.1});
+
+cards.forEach(c=>observer.observe(c));
+
+/* PREMIUM CURSOR */
+const glow=document.createElement("div");
+glow.className="cursor-glow";
+document.body.appendChild(glow);
+
+const ring=document.createElement("div");
+ring.className="cursor-ring";
+document.body.appendChild(ring);
+
+let x=0,y=0,rx=0,ry=0;
+
+document.addEventListener("mousemove",(e)=>{
+  x=e.clientX;
+  y=e.clientY;
+
+  glow.style.left=x+"px";
+  glow.style.top=y+"px";
+});
+
+function animate(){
+  rx += (x-rx)*0.1;
+  ry += (y-ry)*0.1;
+
+  ring.style.left=rx+"px";
+  ring.style.top=ry+"px";
+
+  requestAnimationFrame(animate);
+}
+animate();
+
+</script>
+
+</body>
+</html>
