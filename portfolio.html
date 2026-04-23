@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kandhala Janardhan | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--card:#111827;--accent:#7c3aed;--accent2:#06b6d4;--text:#f1f5f9;--muted:#94a3b8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:radial-gradient(circle at top,#1e1b4b,#020617);color:var(--text)}
+.container{max-width:1200px;margin:auto;padding:20px}
+header{display:flex;align-items:center;justify-content:center;gap:40px;padding:120px 20px;flex-wrap:wrap}
+.profile{width:180px;height:180px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);animation:float 3s ease-in-out infinite}
+.profile img{width:100%;height:100%;object-fit:cover}
+h1{font-size:3rem;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}
+.subtitle{color:var(--muted);margin:10px 0}
+.btn{margin:10px;padding:12px 18px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;text-decoration:none}
+section{margin-top:80px}
+h2{margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+
+/* PREMIUM PROJECT CARD */
+.card{background:rgba(17,24,39,0.7);padding:20px;border-radius:18px;transition:.4s;opacity:0;transform:translateY(40px);position:relative;overflow:hidden}
+.card.show{opacity:1;transform:translateY(0)}
+.card:hover{transform:translateY(-12px) scale(1.02)}
+.project-img{width:100%;border-radius:12px;margin-top:10px}
+.overlay{
+position:absolute;inset:0;
+background:linear-gradient(180deg,transparent,rgba(0,0,0,.8));
+display:flex;align-items:flex-end;justify-content:center;
+opacity:0;transition:.4s;padding:20px
+}
+.card:hover .overlay{opacity:1}
+.buttons a{
+display:inline-block;margin:5px;padding:8px 14px;border-radius:8px;
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+color:white;text-decoration:none;font-size:14px
+}
+
+.skills span{display:inline-block;margin:6px;padding:8px 12px;background:#1f2937;border-radius:8px}
+footer{text-align:center;margin-top:60px;color:var(--muted)}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+@media(max-width:768px){header{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="profile"><img src="mine.jpg"></div>
+<div style="padding-left:10px;">
+<h1 style="margin-bottom:10px;">Kandhala Janardhan</h1>
+<p class="subtitle" id="typing"></p>
+<p style="margin-top:15px; line-height:1.6; color:var(--muted);">
+I am a Cyber Security student passionate about identifying vulnerabilities and building secure systems. I enjoy working on real-world security challenges, performing penetration testing, and continuously improving my technical skills in networking and application security.
+</p>
+<div style="margin-top:20px;">
+<a class="btn" href="mailto:kandhalajanardhan@gmail.com">Email</a>
+<a class="btn" href="https://github.com/kandhala-janardhan">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/kandhala-janardhan-b4a4112b2">LinkedIn</a>
+</div>
+</div>
+</header>
+
+<div class="container">
+
+<section>
+<h2>Featured Project</h2>
+<div class="card">
+<h3>Vulnerability Scanner</h3>
+<p>Python-based tool to detect XSS and input flaws.</p>
+<p><small>This project scans web applications for insecure input fields and detects common vulnerabilities like Cross-Site Scripting (XSS). It helps developers identify weak points and improve security.</small></p>
+<img class="project-img" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+<div class="overlay">
+<div class="buttons">
+<a href="#">View Code</a>
+<a href="#">Live Demo</a>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<b>Password Checker</b>
+<p>Detects weak passwords</p>
+<p><small>This tool evaluates password strength using length, character variety, and common attack patterns to ensure better user security.</small></p>
+<img class="project-img" src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87">
+<div class="overlay"><div class="buttons"><a href="#">View Code</a><a href="#">Demo</a></div></div>
+</div>
+
+<div class="card">
+<b>Packet Analyzer</b>
+<p>Analyzes traffic</p>
+<p><small>A networking tool that captures and inspects data packets to understand traffic flow and detect suspicious activity in the network.</small></p>
+<img class="project-img" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="overlay"><div class="buttons"><a href="#">View Code</a><a href="#">Demo</a></div></div>
+</div>
+
+<div class="card">
+<b>Expense Monitor</b>
+<p>Tracks expenses</p>
+<p><small>This application helps users manage daily expenses by categorizing spending and providing insights into financial habits.</small></p>
+<img class="project-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
+<div class="overlay"><div class="buttons"><a href="#">View Code</a><a href="#">Demo</a></div></div>
+</div>
+
+<div class="card">
+<b>DVWA Lab</b>
+<p>Security simulations</p>
+<p><small>Performed hands-on security testing including SQL Injection and XSS attacks using DVWA to understand real-world web vulnerabilities.</small></p>
+<img class="project-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<div class="overlay"><div class="buttons"><a href="#">View Code</a><a href="#">Demo</a></div></div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Skills</h2>
+<div class="card skills">
+<span>Cyber Security</span><span>Wireshark</span><span>Linux</span><span>Python</span><span>Burp Suite</span>
+</div>
+</section>
+
+<section>
+<h2>Internships</h2>
+<div class="card">
+<b>Cyber Security Intern - Cisco</b><br>
+Worked on password security, threat analysis, and tools.
+</div>
+</section>
+
+<section>
+<h2>Certifications</h2>
+<div class="grid">
+<div class="card">NPTEL - Innovation & Entrepreneurship</div>
+<div class="card">NPTEL - Privacy & Security in Social Media</div>
+<div class="card">NPTEL - Economic Growth and Development</div>
+<div class="card">Quick Heal - Linux</div>
+<div class="card">Quick Heal - Network Security</div>
+<div class="card">Quick Heal - Info Security</div>
+<div class="card">Quick Heal - Digital Forensics</div>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="card">
+Email: kandhalajanardhan@gmail.com<br>
+Phone: +91 8885496472<br>
+Location: Faridabad, Haryana
+</div>
+</section>
+
+</div>
+
+<footer>© 2026 Kandhala Janardhan</footer>
+
+<script>
+const text="Cyber Security Student • Security Analyst Aspirant • CTF Enthusiast";
+let i=0;function type(){if(i<text.length){document.getElementById("typing").innerHTML+=text.charAt(i);i++;setTimeout(type,40)}}type();
+const cards=document.querySelectorAll('.card');
+window.addEventListener('scroll',()=>{const trigger=window.innerHeight*0.85;cards.forEach(el=>{if(el.getBoundingClientRect().top<trigger){el.classList.add('show')}})});
+</script>
+
+</body>
+</html>
